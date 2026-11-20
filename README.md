@@ -1,3 +1,5 @@
+# Button-Animation
+
 # Trishul, Vajra & Astra button animations
 
 Open `index.html` in a browser. No installation or build step is needed.
@@ -17,4 +19,4 @@ Hover over **Button** to reveal the pair. Trishul has waving red and saffron sil
 The page stays idle on load and when changing artwork or form, waiting for interaction with **Button**. **Replay animation** explicitly plays a short demonstration; the **Breeze**, **Charge**, or **Flame** control changes the corresponding effect speed. Reduced-motion preferences are respected.
 
 The artwork is recreated as animated SVG from the three supplied images; **Your reference** displays the image for the selected artwork. All assets are local and the demo works offline.
-# Button-Animation
+
