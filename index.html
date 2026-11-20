@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0d0e0c">
+    <title>Trishul — fluid motion</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230d0e0c'/%3E%3Cpath d='M32 9v46M17 17c-9 24 39 24 30 0M32 9l-5 13m5-13 5 13' fill='none' stroke='%23dcad69' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css?v=6">
+    <script src="trishul-art.js" defer></script>
+    <script src="joined-art.js" defer></script>
+    <script src="vajra-art.js" defer></script>
+    <script src="astra-art.js" defer></script>
+    <script src="app.js?v=5" defer></script>
+  </head>
+  <body data-weapon="trishul">
+    <div class="page-grain" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <label class="wordmark" for="weaponSelect">
+          <span class="weapon-icon" id="weaponIcon" aria-hidden="true"><svg viewBox="0 0 32 40" fill="none"><path d="M16 3v34M6 9C-1 29 33 29 26 9M16 3l-4 10m4-10 4 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="16" cy="28" r="2.5" fill="currentColor"/></svg></span>
+          <select id="weaponSelect" aria-label="Choose artwork">
+            <option value="trishul">Trishul</option>
+            <option value="vajra">Vajra</option>
+            <option value="astra">Astra</option>
+          </select>
+          <svg class="weapon-chevron" viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.2"/></svg>
+        </label>
+        <span class="header-caption">A MOMENT OF MOTION</span>
+        <button class="reference-link" id="viewReference" type="button">Your reference <span aria-hidden="true">↗</span></button>
+      </header>
+
+      <main>
+        <div class="introduction">
+          <h1><em>Fluid motion.</em></h1>
+          <div class="intro-details">
+            <p class="eyebrow"><span></span><span id="artEyebrow">GOLD. VERMILION. A LITTLE WIND.</span></p>
+            <p class="intro-copy">A quiet button. An unexpected reveal.</p>
+          </div>
+        </div>
+
+        <div class="variant-toolbar">
+          <div class="animation-switch" role="group" aria-label="Choose animation">
+            <button type="button" data-animation-choice="original" aria-pressed="false"><span class="choice-number">01</span><span class="choice-label">Twin Rise</span></button>
+            <button type="button" data-animation-choice="joined" aria-pressed="false"><span class="choice-number">02</span><span class="choice-label">United Reach</span></button>
+            <button type="button" data-animation-choice="open-center" aria-pressed="true"><span class="choice-number">03</span><span class="choice-label">Open Core</span></button>
+          </div>
+        </div>
+
+        <section class="demo-stage" id="demoStage" data-animation="open-center" aria-label="Interactive Trishul button animation">
+          <div class="stage-aura" aria-hidden="true"></div>
+          <div class="mandala" id="mandala" aria-hidden="true"></div>
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <span class="stage-coordinate coordinate-left" aria-hidden="true">01 — REVEAL</span>
+          <span class="stage-coordinate coordinate-right" aria-hidden="true">02 — FLOW</span>
+
+          <div class="button-scene" id="buttonScene">
+            <div class="trishul trishul-left" id="trishulLeft" aria-hidden="true"></div>
+            <div class="trishul trishul-right" id="trishulRight" aria-hidden="true"></div>
+            <div class="joined-pair" aria-hidden="true">
+              <div class="joined-arm joined-arm-left" id="joinedTrishulLeft"></div>
+              <div class="joined-arm joined-arm-right" id="joinedTrishulRight"></div>
+            </div>
+            <div class="gold-dust" id="goldDust" aria-hidden="true"></div>
+            <div class="button-halo" aria-hidden="true"></div>
+            <button class="trishul-button" id="trishulButton" type="button" aria-describedby="interactionHint" aria-pressed="false">
+              <span class="button-rail button-rail-top" aria-hidden="true"></span>
+              <span class="button-rail button-rail-bottom" aria-hidden="true"></span>
+              <span class="button-corner corner-tl" aria-hidden="true"></span>
+              <span class="button-corner corner-tr" aria-hidden="true"></span>
+              <span class="button-corner corner-bl" aria-hidden="true"></span>
+              <span class="button-corner corner-br" aria-hidden="true"></span>
+              <span class="button-star" aria-hidden="true">✧</span>
+              <span class="button-label">Button</span>
+              <span class="button-star" aria-hidden="true">✧</span>
+            </button>
+          </div>
+
+        </section>
+
+        <div class="stage-caption">
+          <div class="interaction-caption">
+            <span class="interaction-line" aria-hidden="true"></span>
+            <p id="interactionHint">Hover to awaken</p>
+            <span class="interaction-line" aria-hidden="true"></span>
+          </div>
+          <p class="stage-subtitle" id="stageSubtitle">Two fine lines. One unbroken handle.</p>
+        </div>
+
+        <div class="demo-controls">
+          <div class="live-status"><span class="status-dot"></span><span id="animationStatus" role="status">READY WHEN YOU ARE</span></div>
+          <button class="replay-button" id="replayButton" type="button"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.2 6.6A6.5 6.5 0 1 1 3.5 11M4 2.8v4.5h4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Replay animation</button>
+          <label class="breeze-control" for="breeze"><svg viewBox="0 0 22 20" fill="none" aria-hidden="true"><path d="M2 6h11c5 0 5-6 1-5M2 10h16c4 0 4 6 0 5M2 14h7c4 0 4 5 1 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg><span id="motionLabel">Breeze</span><input id="breeze" type="range" min="0.65" max="1.8" step="0.05" value="1" aria-label="Animation speed"><span id="breezeValue" class="breeze-value">Gentle</span></label>
+        </div>
+
+        <div class="motion-notes" aria-label="About the animation">
+          <div><span class="note-number">01</span><p>Move closer<span>Hover over the button</span></p></div>
+          <div><span class="note-number">02</span><p>Watch it unfold<span id="revealDescription">An open center reveals the joined handle</span></p></div>
+          <div><span class="note-number">03</span><p><b class="motion-note-title" id="motionNoteTitle">Feel the breeze</b><span id="motionNoteCopy">Silk ribbons ripple in the wind</span></p></div>
+        </div>
+      </main>
+
+      <footer><span>INSPIRED BY YOUR REFERENCES</span><span class="footer-center" id="footerMaterial">Crafted in gold &amp; vermilion</span><span>HOVER · TAP · EXPLORE</span></footer>
+    </div>
+
+    <dialog class="reference-dialog" id="referenceDialog" aria-labelledby="referenceTitle">
+      <div class="dialog-top"><div><p class="eyebrow">THE INSPIRATION</p><h2 id="referenceTitle">Your Trishul reference</h2></div><button id="closeReference" type="button" aria-label="Close reference">×</button></div>
+      <img id="referenceImage" src="reference.png" alt="A golden trishul with a damaru and red cloth against a circular gold mandala on black.">
+      <p id="referenceCopy">The gold trishul, damaru, and vermilion cloth, recreated with moving silk.</p>
+    </dialog>
+  </body>
+</html>
